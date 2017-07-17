@@ -14,7 +14,7 @@
     <StartArguments>/d[C:\Iddeal_Server_Ver8\Iddeal_DE1\Data\Comp_BP_Data_Lasalle.mdb] /s[C:\Iddeal_Server_Ver8\V08.mdw]</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <StartArguments>/d[CompsBpTmi] /s[DESKTOP-KB93RHB] /a[1]</StartArguments>
+    <StartArguments>/d[CompsBpTmi] /s[DESKTOP-KB93RHB]</StartArguments>
     <StartWorkingDirectory>
     </StartWorkingDirectory>
   </PropertyGroup>

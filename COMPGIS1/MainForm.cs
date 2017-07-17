@@ -112,9 +112,12 @@ namespace COMPGIS1
         //--------------------------------------------------------------------------
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            if(_cwapp == CompWorksApps.cwNone)
+            {
+                _cwapp = CompWorksApps.cwBuriedPiping;//Making BP as default
+            }
             // Check the Command Line Arguments
-            if (CheckCmdLineArguments())
+                    if (CheckCmdLineArguments())
             {
                 // Remove from TOC Tab Control
                 tcTOC.TabPages.Remove(tabDisplay);
@@ -263,7 +266,7 @@ namespace COMPGIS1
             if (_systemfile.Length == 0)
             {
                 MessageBox.Show(
-                    "The CompWorks workgroup database was not specified!\nPlease check Setup Utilities > GIS Settings");
+                    "The CompWorks server was not specified!\nPlease check Setup Utilities > GIS Settings");
                 return false;
             }
             return true;
